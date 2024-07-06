@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <script type="module" src="/src/demo.ts"></script>
+    <c-dashboard>
+      <h1 slot="header">This is a header</h1>
+      <div>Junk div</div>
+      <p slot="footer">This is a footer</p>
+      <button
+        slot="default"
+        onclick="javascript:alert('Hello from the regular DOM!')"
+      >
+        Button
+      </button>
+    </c-dashboard>
+  </body>
+</html>

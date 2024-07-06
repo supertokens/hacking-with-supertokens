@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <script type="module" src="/solid-web-components.umd.js"></script>
+  </head>
+  <body>
+    <c-dashboard>
+      <div slot="default">
+        I'm in the default slot <br />
+        <button id="button">Click me!</button>
+      </div>
+    </c-dashboard>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.ST.registerDashboard((path) => {
+        window.location.href = path;
+      });
+
+      document.querySelector("#button").addEventListener("click", () => {
+        alert("Button clicked!");
+      });
+    });
+  </script>
+</html>
